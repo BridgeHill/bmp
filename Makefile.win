@@ -4,12 +4,12 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o bmpinfo.o bmp16_555.o bmp32.o bmp24.o bmp8.o bmp4.o bmp1.o color.o paint.o bmp8G.o bmp.o bmp16_565.o colorarray565.o QR_Encode.o
-LINKOBJ  = main.o bmpinfo.o bmp16_555.o bmp32.o bmp24.o bmp8.o bmp4.o bmp1.o color.o paint.o bmp8G.o bmp.o bmp16_565.o colorarray565.o QR_Encode.o
+OBJ      = ../tteemmpp/bmp/main.o ../tteemmpp/bmp/bmpinfo.o ../tteemmpp/bmp/bmp16_555.o ../tteemmpp/bmp/bmp32.o ../tteemmpp/bmp/bmp24.o ../tteemmpp/bmp/bmp8.o ../tteemmpp/bmp/bmp4.o ../tteemmpp/bmp/bmp1.o ../tteemmpp/bmp/color.o ../tteemmpp/bmp/paint.o ../tteemmpp/bmp/bmp8G.o ../tteemmpp/bmp/bmp.o ../tteemmpp/bmp/bmp16_565.o ../tteemmpp/bmp/colorarray565.o ../tteemmpp/bmp/QR_Encode.o
+LINKOBJ  = ../tteemmpp/bmp/main.o ../tteemmpp/bmp/bmpinfo.o ../tteemmpp/bmp/bmp16_555.o ../tteemmpp/bmp/bmp32.o ../tteemmpp/bmp/bmp24.o ../tteemmpp/bmp/bmp8.o ../tteemmpp/bmp/bmp4.o ../tteemmpp/bmp/bmp1.o ../tteemmpp/bmp/color.o ../tteemmpp/bmp/paint.o ../tteemmpp/bmp/bmp8G.o ../tteemmpp/bmp/bmp.o ../tteemmpp/bmp/bmp16_565.o ../tteemmpp/bmp/colorarray565.o ../tteemmpp/bmp/QR_Encode.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -pg -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
-BIN      = bmp.exe
+BIN      = ../tteemmpp/bmp/bmp.exe
 CXXFLAGS = $(CXXINCS) -pg -g3
 CFLAGS   = $(INCS) -pg -g3
 RM       = rm.exe -f
@@ -24,47 +24,47 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.cpp
-	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+../tteemmpp/bmp/main.o: main.cpp
+	$(CPP) -c main.cpp -o ../tteemmpp/bmp/main.o $(CXXFLAGS)
 
-bmpinfo.o: bmpinfo.cpp
-	$(CPP) -c bmpinfo.cpp -o bmpinfo.o $(CXXFLAGS)
+../tteemmpp/bmp/bmpinfo.o: bmpinfo.cpp
+	$(CPP) -c bmpinfo.cpp -o ../tteemmpp/bmp/bmpinfo.o $(CXXFLAGS)
 
-bmp16_555.o: bmp16_555.cpp
-	$(CPP) -c bmp16_555.cpp -o bmp16_555.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp16_555.o: bmp16_555.cpp
+	$(CPP) -c bmp16_555.cpp -o ../tteemmpp/bmp/bmp16_555.o $(CXXFLAGS)
 
-bmp32.o: bmp32.cpp
-	$(CPP) -c bmp32.cpp -o bmp32.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp32.o: bmp32.cpp
+	$(CPP) -c bmp32.cpp -o ../tteemmpp/bmp/bmp32.o $(CXXFLAGS)
 
-bmp24.o: bmp24.cpp
-	$(CPP) -c bmp24.cpp -o bmp24.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp24.o: bmp24.cpp
+	$(CPP) -c bmp24.cpp -o ../tteemmpp/bmp/bmp24.o $(CXXFLAGS)
 
-bmp8.o: bmp8.cpp
-	$(CPP) -c bmp8.cpp -o bmp8.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp8.o: bmp8.cpp
+	$(CPP) -c bmp8.cpp -o ../tteemmpp/bmp/bmp8.o $(CXXFLAGS)
 
-bmp4.o: bmp4.cpp
-	$(CPP) -c bmp4.cpp -o bmp4.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp4.o: bmp4.cpp
+	$(CPP) -c bmp4.cpp -o ../tteemmpp/bmp/bmp4.o $(CXXFLAGS)
 
-bmp1.o: bmp1.cpp
-	$(CPP) -c bmp1.cpp -o bmp1.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp1.o: bmp1.cpp
+	$(CPP) -c bmp1.cpp -o ../tteemmpp/bmp/bmp1.o $(CXXFLAGS)
 
-color.o: color.cpp
-	$(CPP) -c color.cpp -o color.o $(CXXFLAGS)
+../tteemmpp/bmp/color.o: color.cpp
+	$(CPP) -c color.cpp -o ../tteemmpp/bmp/color.o $(CXXFLAGS)
 
-paint.o: paint.cpp
-	$(CPP) -c paint.cpp -o paint.o $(CXXFLAGS)
+../tteemmpp/bmp/paint.o: paint.cpp
+	$(CPP) -c paint.cpp -o ../tteemmpp/bmp/paint.o $(CXXFLAGS)
 
-bmp8G.o: bmp8G.cpp
-	$(CPP) -c bmp8G.cpp -o bmp8G.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp8G.o: bmp8G.cpp
+	$(CPP) -c bmp8G.cpp -o ../tteemmpp/bmp/bmp8G.o $(CXXFLAGS)
 
-bmp.o: bmp.cpp
-	$(CPP) -c bmp.cpp -o bmp.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp.o: bmp.cpp
+	$(CPP) -c bmp.cpp -o ../tteemmpp/bmp/bmp.o $(CXXFLAGS)
 
-bmp16_565.o: bmp16_565.cpp
-	$(CPP) -c bmp16_565.cpp -o bmp16_565.o $(CXXFLAGS)
+../tteemmpp/bmp/bmp16_565.o: bmp16_565.cpp
+	$(CPP) -c bmp16_565.cpp -o ../tteemmpp/bmp/bmp16_565.o $(CXXFLAGS)
 
-colorarray565.o: colorarray565.cpp
-	$(CPP) -c colorarray565.cpp -o colorarray565.o $(CXXFLAGS)
+../tteemmpp/bmp/colorarray565.o: colorarray565.cpp
+	$(CPP) -c colorarray565.cpp -o ../tteemmpp/bmp/colorarray565.o $(CXXFLAGS)
 
-QR_Encode.o: QR_Encode.cpp
-	$(CPP) -c QR_Encode.cpp -o QR_Encode.o $(CXXFLAGS)
+../tteemmpp/bmp/QR_Encode.o: QR_Encode.cpp
+	$(CPP) -c QR_Encode.cpp -o ../tteemmpp/bmp/QR_Encode.o $(CXXFLAGS)
